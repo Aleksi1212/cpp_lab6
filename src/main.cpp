@@ -126,15 +126,15 @@ int main()
     random_device rd;
     mt19937 gen(rd());
 
-    uniform_real_distribution<> dist_area(min_apt_area, max_apt_rent);
-    uniform_real_distribution<> dist_rent(min_apt_rent, max_apt_rent);
+    uniform_real_distribution<> rand_area(min_apt_area, max_apt_rent);
+    uniform_real_distribution<> rand_rent(min_apt_rent, max_apt_rent);
 
     for (int i = 0; i < 3; i++) {
         Apartment apartment(
             make_shared<House>(house1),
             i+1,
-            dist_area(gen),
-            dist_rent(gen)
+            rand_area(gen),
+            rand_rent(gen)
         );
         apartment_vec.push_back(apartment);
     }
@@ -142,8 +142,8 @@ int main()
         Apartment apartment(
             make_shared<House>(house2),
             j+1,
-            dist_area(gen),
-            dist_rent(gen)
+            rand_area(gen),
+            rand_rent(gen)
         );
         apartment_vec.push_back(apartment);
     }
