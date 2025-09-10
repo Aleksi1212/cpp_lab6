@@ -104,7 +104,7 @@ void sort_apartments(vector<Apartment> &apartments)
     sort(
         apartments.begin(),
         apartments.end(),
-        [](const Apartment &a1, const Apartment &a2) {
+        [](const auto &a1, const auto &a2) {
             return a1 < a2;
         }
     );
