@@ -66,7 +66,7 @@ string House::getAddress() { return address; }
 
 ostream &operator<<(ostream &out, const House &house)
 {
-    cout<< house.address << ", "
+    out<< house.address << ", "
         << house.area_msq << ", "
         << house.price_eur;
     return out;
