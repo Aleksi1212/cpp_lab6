@@ -126,7 +126,7 @@ int main()
     random_device rd;
     mt19937 gen(rd());
 
-    uniform_real_distribution<> rand_area(min_apt_area, max_apt_rent);
+    uniform_real_distribution<> rand_area(min_apt_area, max_apt_area);
     uniform_real_distribution<> rand_rent(min_apt_rent, max_apt_rent);
 
     for (int i = 0; i < 3; i++) {
